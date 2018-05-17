@@ -5,4 +5,5 @@ type Subscription {
     quoteTokenSymbol: Symbol!
     exchanges: [ExchangeEnum]
   ): Orderbook
+  myField: Int!
 }

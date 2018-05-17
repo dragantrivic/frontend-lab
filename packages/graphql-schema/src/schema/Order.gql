@@ -1,5 +1,6 @@
 type Order {
   id: String!
+  foo(who: String!): String
   owner: String!
   isActive: Boolean!
   type: String!

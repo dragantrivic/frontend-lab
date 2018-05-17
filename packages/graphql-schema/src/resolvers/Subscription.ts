@@ -93,4 +93,13 @@ export { Order };
 export default {
   price,
   orderbook,
+  myField: {
+    resolve: value => value,
+    subscribe: (parent, args, context) => {
+      const number$ = Rx.Observable.interval(1000);
+      const iterator = context.pubsub.asyncIterator('number');
+      const publish = value => context.pubsub.publish('number', value);
+      return withUnsubscribe(number$, iterator, publish);
+    },
+  },
 };

@@ -13,6 +13,7 @@ import ExecuteRequest from "../../containers/ExecuteRequest";
 import TradeHelper from "../../containers/TradeHelper";
 import Trade from "../../containers/Trade";
 import OpenOrders from "../../containers/OpenOrders";
+import MyComponent from "../organisms/MyComponent";
 
 const Fund = ({ isManager, fundAddress, canInvest, pendingRequest }) => (
   <div className="App">
@@ -41,6 +42,7 @@ const Fund = ({ isManager, fundAddress, canInvest, pendingRequest }) => (
       )}
       <br />
       <Orderbook />
+      <MyComponent />
       <br />
       <OpenOrders address={fundAddress} />
       <br />
